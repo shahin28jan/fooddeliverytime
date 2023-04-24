@@ -1,0 +1,103 @@
+<html>
+<body>
+<form action="{{url_for('predict_datapoint')}}" method="POST">
+    <div class="form-group">
+        <label for="Delivery_person_Age">Delivery_person_Age:</label>
+        <input type="text" id="Delivery_person_Age" name="Delivery_person_Age" placeholder="Enter Delivery_person_Age value (float)">
+    </div>
+
+    <div class="form-group">
+        <label for="Delivery_person_Ratings">Delivery_person_Ratings:</label>
+        <input type="text" id="Delivery_person_Ratings" name="Delivery_person_Ratings" placeholder="Enter Delivery_person_Ratings value (float)">
+    </div>
+
+    <div class="form-group">  
+        <label for="Restaurant_latitude">Restaurant_latitude:</label>
+        <input type="text" id="Restaurant_latitude" name="Restaurant_latitude" placeholder="Enter Restaurant_latitude value (float)">
+    </div>
+    
+    <div class="form-group">
+        <label for="Restaurant_longitude">Restaurant_longitude:</label>
+        <input type="text" id="Restaurant_longitude" name="Restaurant_longitude" placeholder="Enter Restaurant_longitude value (float)">
+    </div>
+  
+    <div class="form-group">
+        <label for="Delivery_location_latitude">Delivery_location_latitude:</label>
+        <input type="text" id="Delivery_location_latitude" name="Delivery_location_latitude" placeholder="Enter Delivery_location_latitude value (float)">
+    </div>
+  
+    <div class="form-group">
+        <label for="Delivery_location_longitude">Delivery_location_longitude:</label>
+        <input type="text" id="Delivery_location_longitude" name="Delivery_location_longitude" placeholder="Enter Delivery_location_longitude value (float)">
+    </div>         
+
+   
+
+    
+
+    <div class="form-group">
+        <label for="Vehicle_condition">Vehicle_condition:</label>
+        <input type="text" id="Vehicle_condition" name="Vehicle_condition" placeholder="Enter Vehicle_condition value (float)">
+    </div> 
+
+    
+    <div class="form-group">
+        <label for="multiple_deliveries">multiple_deliveries:</label>
+        <input type="text" id="multiple_deliveries" name="multiple_deliveries" placeholder="Enter multiple_deliveries value (float)">
+    </div> 
+ 
+  
+<div class="form-group">
+  <label for="Weather_conditions">Weather_conditions:</label>
+  <select id="Weather_conditions" name="Weather_conditions">
+    <option value="Fog">Fog</option>
+    <option value="Stormy">Stormy</option>
+    <option value="Sandstorms">Sandstorms</option>
+    <option value="Windy">Windy</option>
+    <option value="Cloudy">Cloudy</option>
+    <option value="Sunny">Sunny</option>
+  </select>
+</div>
+  
+<div class="form-group">
+  <label for="Road_traffic_density">Road_traffic_density:</label>
+  <select id="Road_traffic_density" name="Road_traffic_density">
+    <option value="Jam">Jam</option>
+    <option value="High">High</option>
+    <option value="Medium">Medium</option>
+    <option value="Low">Low</option>
+  </select>
+</div>
+
+<div class="form-group">
+    <label for="Type_of_vehicle">Type_of_vehicle:</label>
+    <select id="Type_of_vehicle" name="Type_of_vehicle">
+      <option value="motorcycle">motorcycle</option>
+      <option value="scooter">scooter</option>
+      <option value="electric_scooter">electric_scooter</option>
+      <option value="bicycle">bicycle</option>
+    </select>
+  </div>
+
+  <div class="form-group">
+    <label for="Festival">Festival:</label>
+    <select id="Festival" name="Festival">
+      <option value="No">No</option>
+      <option value="Yes">Yes</option>
+    </select>
+  </div>
+
+  <div class="form-group">
+    <label for="City">City:</label>
+    <select id="City" name="City">
+      <option value="Metropolitian">Metropolitian</option>
+      <option value="Urban">Urban</option>
+      <option value="Semi-Urban">Semi-Urban</option>
+    </select>
+  </div>
+
+<div style="clear:both;"></div>
+  <input type="submit" value="Submit">
+</form>
+</body>
+</html>
