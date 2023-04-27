@@ -26,12 +26,9 @@ class DataTransformation:
             logging.info('Data Transformation initiated')
 
             '''#Calculate distance by Haversine formula (used to find the distance between two geographical locations)
-
             R = 6371  ##The earth's radius (in km)
-
             def deg_to_rad(degrees):
                 return degrees * (np.pi/180)
-
             ## The haversine formula
                 def distcalculate(lat1, lon1, lat2, lon2):
                     d_lat = deg_to_rad(lat2-lat1)
@@ -41,24 +38,19 @@ class DataTransformation:
                     a = a1 * a2
                     c = 2 * np.arctan2(np.sqrt(a), np.sqrt(1-a))
                     return R * c
-
             # Create distance column & calculate the distance
                 df['distance'] = np.nan
-
                 for i in range(len(df)):
                     df.loc[i, 'distance'] = distcalculate(df.loc[i, 'Restaurant_latitude'], 
                     df.loc[i, 'Restaurant_longitude'], 
                     df.loc[i, 'Delivery_location_latitude'], 
-                    df.loc[i, 'Delivery_location_longitude'])
-
+                    df.loc[i, 'Delivery_location_longitude'])'''
+            
             ## In given data many columns are not affect the delivery time, so I drop those columns
-
             df = df.drop(labels=['ID', 'Delivery_person_ID', 'Order_Date', 'Time_Orderd', 'Time_Order_picked', 'Restaurant_latitude',	'Restaurant_longitude',	'Delivery_location_latitude', 'Delivery_location_longitud', 'Type_of_order'],axis=1)
-
-
             ## Independent and dependent feature
             X = df.drop(labels=['Time_taken (min)'],axis=1)
-            Y = df[['Time_taken (min)']]'''
+            Y = df[['Time_taken (min)']]
 
 
             # Define which columns should be ordinal-encoded and which should be scaled
@@ -159,4 +151,3 @@ class DataTransformation:
             logging.info("Exception occured in the initiate_datatransformation")
 
             raise CustomException(e,sys)
-                
